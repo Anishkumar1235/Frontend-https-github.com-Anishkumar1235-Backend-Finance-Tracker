@@ -3,9 +3,8 @@ import {
   PlusIcon,
   PencilIcon,
   TrashIcon,
-  CurrencyDollarIcon,
   MinusCircleIcon,
-} from "@heroicons/react/24/solid"; // Correct icons
+} from "@heroicons/react/24/solid"; // Remove CurrencyDollarIcon
 import TransactionForm from "./TransactionForm";
 import axios from "axios";
 
@@ -105,7 +104,8 @@ const TransactionDashboard = () => {
       {/* Summary Section with Icons */}
       <div className="flex justify-around mb-8 bg-gray-100 p-4 rounded shadow">
         <div className="text-center">
-          <CurrencyDollarIcon className="h-8 w-8 text-green-600 mb-2 inline-block" />
+          {/* Use ₹ symbol instead of CurrencyDollarIcon */}
+          <span className="h-8 w-8 text-green-600 mb-2 inline-block">₹</span>
           <h2 className="text-lg font-semibold text-green-600">Total Income</h2>
           <p className="text-2xl font-bold">₹{income.toFixed(2)}</p>
         </div>
@@ -115,7 +115,8 @@ const TransactionDashboard = () => {
           <p className="text-2xl font-bold">₹{expenses.toFixed(2)}</p>
         </div>
         <div className="text-center">
-          <CurrencyDollarIcon className="h-8 w-8 text-blue-600 mb-2 inline-block" />
+          {/* Use ₹ symbol instead of CurrencyDollarIcon */}
+          <span className="h-8 w-8 text-blue-600 mb-2 inline-block">₹</span>
           <h2 className="text-lg font-semibold text-blue-600">Balance</h2>
           <p className="text-2xl font-bold">₹{balance.toFixed(2)}</p>
         </div>
